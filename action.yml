@@ -8,9 +8,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Substitute base href
-      run: sed -i 's/base href="\/"/base href="\/${{ github.event.repository.name }}\/"/' ${{ inputs.project_path }}/wwwroot/index.html
-      shell: bash
+#    - name: Substitute base href
+#      run: sed -i 's/base href="\/"/base href="\/${{ github.event.repository.name }}\/"/' ${{ inputs.project_path }}/wwwroot/index.html
+#      shell: bash
     - name: Setup SPA 404 page redirection
       run: |
         cp ${{ github.action_path }}/404.html ${{ inputs.project_path }}/wwwroot
